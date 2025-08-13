@@ -14,12 +14,9 @@ mongoose.connection.on('connected', () => {
 app.use(express.json());
 app.use(logger('dev'));
 
-// Add the petRouter to the `/pets` route
-app.use('/tracks', trackRouter);
-
-
-// Routes go here
-
+// Import and use routes
+const tracksRouter = require('./controllers/tracks');
+app.use('/tracks', tracksRouter);
 
 app.listen(3000, () => {
   console.log('The express app is ready!');

@@ -1,14 +1,10 @@
-const Tracks = require('../models/track.js');
+const Track = require('../models/track.js');
 const express = require('express');
 const router = express.Router();
 
 
 // Write your routes/controller functions here
-// controllers/pets.js
 
-// controllers/pets.js
-
-// controllers/pets.js
 
 // CREATE - POST - /tracks
 router.post('/', async (req, res) => {
@@ -19,12 +15,6 @@ router.post('/', async (req, res) => {
     res.status(500).json({ err: err.message });
   }
 });
-
-
-
-
-
-
 
 
 // Export the router at the bottom of the file
